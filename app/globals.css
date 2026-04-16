@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #000;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Barlow', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(44,163,238,0.3); }
+  50%       { box-shadow: 0 0 40px rgba(44,163,238,0.6); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.fade-up   { animation: fadeUp 0.5s ease both; }
+.fade-up-1 { animation: fadeUp 0.5s 0.1s ease both; }
+.fade-up-2 { animation: fadeUp 0.5s 0.2s ease both; }
+.fade-up-3 { animation: fadeUp 0.5s 0.3s ease both; }
+.fade-up-4 { animation: fadeUp 0.5s 0.4s ease both; }
